@@ -8,3 +8,5 @@ APP_NAME=dcs
 #Environment 
 KF_ENV=test
 
+## GITHUB version for official kubeflow components
+KUBEFLOW_GITHUB_VERSION=v0.3.0-rc.3

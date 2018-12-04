@@ -13,9 +13,21 @@ environments:
     k8sVersion: v1.9.7
     path: test
 kind: ksonnet.io/app
+libraries:
+  kubeflow/core:
+    name: core
+    registry: kubeflow
+    version: c7b3be5138d8c41ec86991da3fe05b6c11d6908b
+  kubeflow/tf-serving:
+    name: tf-serving
+    registry: kubeflow
+    version: c7b3be5138d8c41ec86991da3fe05b6c11d6908b
 name: dcs
 registries:
   incubator:
     protocol: github
     uri: github.com/ksonnet/parts/tree/master/incubator
+  kubeflow:
+    protocol: github
+    uri: github.com/kubeflow/kubeflow/tree/v0.3.0-rc.3/kubeflow
 version: 0.0.1
