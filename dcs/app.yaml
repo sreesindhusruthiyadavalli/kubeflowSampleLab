@@ -8,7 +8,7 @@ environments:
     path: default
   test:
     destination:
-      namespace: kubeflow1
+      namespace: kubeflowsample
       server: https://35.244.13.79
     k8sVersion: v1.9.7
     path: test

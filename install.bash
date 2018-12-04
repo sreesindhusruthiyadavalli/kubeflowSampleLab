@@ -18,4 +18,14 @@ ks registry add kubeflow github.com/kubeflow/kubeflow/tree/${KUBEFLOW_GITHUB_VER
 ks pkg install kubeflow/core@${KUBEFLOW_GITHUB_VERSION}
 ks pkg install kubeflow/tf-serving@${KUBEFLOW_GITHUB_VERSION}
 
+#Deploy kubeflow core components to K8s cluster.
+# If you are doing this on GCP, you need to run the following command first:
+# kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<your@email.com>
 
+ks generate centraldashboard centraldashboard
+#Apply the component to the cluster
+ks apply ${KF_ENV} -c centraldashboard
+#ks show to see the applied configuration
+#ks show ${KF_ENV}
+ks generate tf-job-operator tf-job-operator
+ks apply ${KF_ENV} -c tf-job-operator
