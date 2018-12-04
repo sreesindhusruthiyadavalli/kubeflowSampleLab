@@ -14,6 +14,18 @@ environments:
     path: test
 kind: ksonnet.io/app
 libraries:
+  ciscoai/nfs-server:
+    name: nfs-server
+    registry: ciscoai
+    version: 9a7ef03a7606b5ba7a719a5c8c70da387e79ece8
+  ciscoai/nfs-volume:
+    name: nfs-volume
+    registry: ciscoai
+    version: 9a7ef03a7606b5ba7a719a5c8c70da387e79ece8
+  ciscoai/tf-mnistjob:
+    name: tf-mnistjob
+    registry: ciscoai
+    version: 9a7ef03a7606b5ba7a719a5c8c70da387e79ece8
   kubeflow/core:
     name: core
     registry: kubeflow
@@ -24,6 +36,9 @@ libraries:
     version: c7b3be5138d8c41ec86991da3fe05b6c11d6908b
 name: dcs
 registries:
+  ciscoai:
+    protocol: github
+    uri: github.com/CiscoAI/kubeflow-examples/tree/master/tf-mnist/pkg
   incubator:
     protocol: github
     uri: github.com/ksonnet/parts/tree/master/incubator

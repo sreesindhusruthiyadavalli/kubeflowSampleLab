@@ -21,5 +21,17 @@
       tfJobUiServiceType: "ClusterIP",
       tfJobVersion: "v1alpha2",
     },
+    "nfs-server": {
+      name: "nfs-server",
+      namespace: "null",
+    },
+    "nfs-volume": {
+      capacity: "1Gi",
+      mountpath: "/",
+      name: "nfs",
+      namespace: "null",
+      nfs_server_ip: "10.47.248.90",
+      storage_request: "1Gi",
+    },
   },
 }

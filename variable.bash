@@ -10,3 +10,9 @@ KF_ENV=test
 
 ## GITHUB version for official kubeflow components
 KUBEFLOW_GITHUB_VERSION=v0.3.0-rc.3
+
+#CiscoAI version for nfs server
+CISCOAI_GITHUB_VERSION=master
+
+## Name of the NFS Persistent Volume
+NFS_PVC_NAME=nfs
