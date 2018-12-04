@@ -1,0 +1,21 @@
+apiVersion: 0.3.0
+environments:
+  default:
+    destination:
+      namespace: default
+      server: https://35.244.13.79
+    k8sVersion: v1.9.7
+    path: default
+  test:
+    destination:
+      namespace: kubeflow1
+      server: https://35.244.13.79
+    k8sVersion: v1.9.7
+    path: test
+kind: ksonnet.io/app
+name: dcs
+registries:
+  incubator:
+    protocol: github
+    uri: github.com/ksonnet/parts/tree/master/incubator
+version: 0.0.1
